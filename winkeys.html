@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinKeys - Ativação Original do Windows</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d7 0%, #00a4ef 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .checkmark {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-color: #10B981;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 22px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fab fa-windows text-4xl mr-3"></i>
+                    <h1 class="text-2xl font-bold">WinKeys</h1>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#services" class="hover:text-blue-200 transition">Serviços</a></li>
+                        <li><a href="#how-it-works" class="hover:text-blue-200 transition">Como Funciona</a></li>
+                        <li><a href="#contact" class="hover:text-blue-200 transition">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-700 px-4 py-2">
+            <ul class="flex flex-col space-y-3">
+                <li><a href="#services" class="block hover:text-blue-200 transition">Serviços</a></li>
+                <li><a href="#how-it-works" class="block hover:text-blue-200 transition">Como Funciona</a></li>
+                <li><a href="#contact" class="block hover:text-blue-200 transition">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Ativação Original do Windows</h2>
+                <p class="text-xl mb-6">Compre sua chave de ativação original com suporte remoto especializado.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#services" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">Ver Planos</a>
+                    <a href="#how-it-works" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">Como Funciona</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888854.png" alt="Windows Logo" class="w-64 h-64 floating-button">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Windows 10 Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card transition duration-300">
+                    <div class="bg-blue-600 py-4 px-6">
+                        <h3 class="text-2xl font-bold text-white">Windows 10</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl font-bold text-gray-800">R$ 50,90</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Todas as versões disponíveis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Ativação 100% original</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Suporte remoto via AnyDesk</span>
+                            </li>
+                        </ul>
+                        <button onclick="addToCart('Windows 10', 50.90)" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Windows 11 Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card transition duration-300">
+                    <div class="bg-purple-600 py-4 px-6">
+                        <h3 class="text-2xl font-bold text-white">Windows 11</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl font-bold text-gray-800">R$ 80,99</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Todas as versões disponíveis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Ativação 100% original</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="checkmark"><i class="fas fa-check text-xs"></i></span>
+                                <span>Suporte remoto via AnyDesk</span>
+                            </li>
+                        </ul>
+                        <button onclick="addToCart('Windows 11', 80.99)" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Como Funciona</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Escolha seu Windows</h3>
+                    <p class="text-gray-600">Selecione a versão do Windows que deseja ativar (10 ou 11) e adicione ao carrinho.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Entre em Contato</h3>
+                    <p class="text-gray-600">Após finalizar a compra, entre em contato conosco pelo WhatsApp, Telegram ou Instagram.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pagamento</h3>
+                    <p class="text-gray-600">Efetue o pagamento e encaminhe o comprovante para nós via Chat. (atualmente só aceitamos PIX)</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ativação Remota</h3>
+                    <p class="text-gray-600">Faremos um acesso remoto via AnyDesk para ativar seu Windows com a chave original.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">O Que Nossos Clientes Dizem</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Carlos Silva</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Ativei meu Windows 10 Pro com eles e foi tudo perfeito! Atendimento rápido e profissional."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Ana Oliveira</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Ótimo serviço! Ativaram meu Windows 11 Home em menos de 15 minutos após o pagamento."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Roberto Santos</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Preço justo e atendimento excelente. Recomendo para quem busca qualidade e custo beneficio."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Entre em Contato</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 gradient-bg text-white p-8">
+                        <h3 class="text-2xl font-bold mb-4">Nossos Canais</h3>
+                        <p class="mb-6">Estamos disponíveis para tirar suas dúvidas e realizar seu atendimento.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-white text-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">WhatsApp</p>
+                                    <p class="text-blue-100">(11) 97823-5320</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-white text-pink-600 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Instagram</p>
+                                    <p class="text-blue-100">@winkeys_suporte</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-white text-blue-400 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-telegram text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Telegram</p>
+                                    <p class="text-blue-100">@winkeys_suporte</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Perguntas Frequentes</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="border-b pb-4">
+                                <h4 class="font-semibold text-gray-800">As chaves são realmente originais?</h4>
+                                <p class="text-gray-600 mt-1">Sim, todas as chaves são 100% originais e fornecidas diretamente pela Microsoft.</p>
+                            </div>
+                            
+                            <div class="border-b pb-4">
+                                <h4 class="font-semibold text-gray-800">Preciso ter o Windows instalado?</h4>
+                                <p class="text-gray-600 mt-1">Sim, você precisa ter o Windows (10 ou 11) já instalado em sua máquina para que possamos ativá-lo.</p>
+                            </div>
+                            
+                            <div class="border-b pb-4">
+                                <h4 class="font-semibold text-gray-800">Quanto tempo leva para ativar?</h4>
+                                <p class="text-gray-600 mt-1">O processo de ativação é feito imediatamente após o pagamento, durante o acesso remoto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b p-4">
+                <h3 class="text-xl font-bold">Seu Carrinho</h3>
+                <button onclick="closeCart()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="cart-items" class="p-4">
+                <!-- Cart items will be added here dynamically -->
+                <p id="empty-cart-message" class="text-gray-500 text-center py-8">Seu carrinho está vazio</p>
+            </div>
+            
+            <div class="border-t p-4">
+                <div class="flex justify-between mb-4">
+                    <span class="font-semibold">Total:</span>
+                    <span id="cart-total" class="font-bold">R$ 0,00</span>
+                </div>
+                
+                <div id="contact-info" class="hidden">
+                    <p class="text-sm text-gray-600 mb-3">Entre em contato conosco para finalizar sua compra:</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="bg-green-500 text-white p-2 rounded-full hover:bg-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 text-white p-2 rounded-full hover:bg-blue-500">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3">Ou ligue: (XX) XXXX-XXXX</p>
+                </div>
+                
+                <button id="checkout-btn" onclick="showContactInfo()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition disabled:opacity-50" disabled>
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Button -->
+    <div class="fixed bottom-6 right-6">
+        <button onclick="openCart()" class="bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center relative">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fab fa-windows text-3xl mr-3"></i>
+                        <h2 class="text-2xl font-bold">WinKeys</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">Ativação original do Windows com suporte remoto.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 WinKeys. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Shopping cart functionality
+        let cart = [];
+        
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            updateCart();
+            openCart();
+        }
+        
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            
+            // Update cart count
+            cartCount.textContent = cart.length;
+            
+            // Update cart items
+            if (cart.length === 0) {
+                emptyCartMessage.classList.remove('hidden');
+                cartItems.innerHTML = '';
+                checkoutBtn.disabled = true;
+                document.getElementById('contact-info').classList.add('hidden');
+            } else {
+                emptyCartMessage.classList.add('hidden');
+                
+                let itemsHTML = '';
+                let total = 0;
+                
+                cart.forEach((item, index) => {
+                    itemsHTML += `
+                        <div class="flex justify-between items-center py-3 border-b">
+                            <div>
+                                <p class="font-medium">${item.product}</p>
+                                <p class="text-sm text-gray-600">R$ ${item.price.toFixed(2)}</p>
+                            </div>
+                            <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                    total += item.price;
+                });
+                
+                cartItems.innerHTML = itemsHTML;
+                cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+                checkoutBtn.disabled = false;
+            }
+        }
+        
+        function openCart() {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+        
+        function closeCart() {
+            document.getElementById('cart-modal').classList.add('hidden');
+            document.getElementById('contact-info').classList.add('hidden');
+        }
+        
+        function showContactInfo() {
+            document.getElementById('contact-info').classList.remove('hidden');
+            document.getElementById('checkout-btn').classList.add('hidden');
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
